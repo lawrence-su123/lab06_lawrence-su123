@@ -1,3 +1,28 @@
+/*  Assignment:  Lab06
+ |
+ |       Author:  Lawrence Su
+ |
+ |   To Compile:  EXPLAIN HOW TO COMPILE THIS PROGRAM
+ |
+ |        Class:  NAME AND QUARTER OF THE CLASS FOR WHICH THIS PROGRAM WAS
+ |                      WRITTEN
+ |     Due Date:  DATE AND TIME THAT THIS PROGRAM IS/WAS DUE TO BE SUBMITTED
+ |
+ +-----------------------------------------------------------------------------
+ |
+ |  Description:  DESCRIBE THE PROBLEM THAT THIS PROGRAM WAS WRITTEN TO SOLVE.
+ |
+ |        Input:  DESCRIBE THE INPUT THAT THE PROGRAM REQUIRES.
+ |
+ |       Output:  DESCRIBE THE OUTPUT THAT THE PROGRAM PRODUCES.
+ |
+ |    Algorithm:  OUTLINE THE APPROACH USED BY THE PROGRAM TO SOLVE THE
+ |      PROBLEM.
+ |
+ |   Known Bugs:  IF THE PROGRAM DOES NOT FUNCTION CORRECTLY IN SOME
+ |      SITUATIONS, DESCRIBE THE SITUATIONS AND PROBLEMS HERE.
+ |
+ */
 #include <cassert>
 #include "moreArrayFuncs.h"
 
@@ -10,7 +35,15 @@
 
 int indexOfMax(int *a, int size) {
   assert(size >= 1);
-  return -42; // STUB !!! Remove and replace with correct code
+  int largest = 0;
+for (int i=0; i<size; i++)
+{
+	if (a[i]>a[largest])
+	{
+		largest = i;
+	}
+}
+  return largest; // STUB !!! Remove and replace with correct code
 }
 
 // a: an array of ints.  size is how many ints in array
@@ -21,7 +54,15 @@ int indexOfMax(int *a, int size) {
 // You may assume size >= 1
 int indexOfMin(int *a, int size) {
   assert(size >= 1);
-  return -42; // STUB !!! Remove and replace with correct code
+  int smallest = 0;
+  for (int i=0; i<size; i++)
+  {
+  if (a[i]<a[smallest])
+  {
+	  smallest = i;
+  }
+  }
+  return smallest; // STUB !!! Remove and replace with correct code
 }
 
 // a: an array of ints.  size is how many ints in array
@@ -30,7 +71,15 @@ int indexOfMin(int *a, int size) {
 // You may assume size >= 1
 int largestValue(int *a, int size) {
   assert(size >= 1);
-  return -42; // STUB !!! Remove and replace with correct code
+  int largest = a[0];
+  for (int i=0; i<size; i++) 
+  {
+	  if (a[i]>a[0])
+	  {
+	  largest = a[i];
+	  }
+  }
+  return largest; // STUB !!! Remove and replace with correct code
 }
 
 // a: an array of ints.  size is how many ints in array
@@ -40,16 +89,26 @@ int largestValue(int *a, int size) {
 
 int smallestValue(int *a, int size) {
   assert(size >= 1);
-  return -42; // STUB !!! Remove and replace with correct code
+  int smallest=a[0];
+  for (int i=0; i<size; i++)
+  {
+	  if (a[i]<smallest){
+		  smallest = a[i];
+	  }
+  return smallest; // STUB !!! Remove and replace with correct code
 }
-
 
 // a: an array of ints.  size is how many ints in array
 // Return the sum of all the elements in the array
 // size may be 0 in this case, or non-zero.
 
 int sum(int *a, int size) {
-  return -42; // STUB
+  int t = 0;
+  for (int i=0; i<size; i++)
+  {
+	  t = t + a[i];
+  }
+	return t; // STUB
 }
 
 
@@ -60,7 +119,11 @@ int sum(int *a, int size) {
 // copy n elements from src to dest.
 
 void copyElements(int *dest, int *src, int n) {
-  // STUB: Fix this
+  for (int i= 0; i<n;i++)
+  {
+	  src[i] = dest[i];
+  }
+	// STUB: Fix this
 }
 
 // dest is an array of int that has capacity at LEAST of size n
@@ -71,7 +134,15 @@ void copyElements(int *dest, int *src, int n) {
 // return the number of elements that were copied
 
 int copyOddOnly(int *dest, int *src, int n) {
-  return -42; // stub @@@ FIX THIS 
+  int s = 0;
+  for (int i=0; i<n; i++)
+	  if (src[i]%2=1)
+	  {
+		  s = s +1;
+  		dest[n]=sec[n];
+	  }
+}
+	return s; // stub @@@ FIX THIS 
 }
 
 // a, b and product are all arrays of size n (or greater)
