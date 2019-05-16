@@ -122,7 +122,7 @@ int sum(int *a, int size) {
 void copyElements(int *dest, int *src, int n) {
   for (int i= 0; i<n;i++)
   {
-	  src[i] = dest[i];
+	  dest[i] = src[i];
   }
 	// STUB: Fix this
 }
@@ -163,7 +163,6 @@ void multiplyPairwise(int *a, int *b, int *product, int n) {
  {
 	 product[i]= a[i]*b[i];
 	// STUB; fix this
-}
 }
 
 // len is the number of elements the array you create should contain
