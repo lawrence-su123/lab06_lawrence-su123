@@ -95,6 +95,7 @@ int smallestValue(int *a, int size) {
 	  if (a[i]<smallest){
 		  smallest = a[i];
 	  }
+  }
   return smallest; // STUB !!! Remove and replace with correct code
 }
 
@@ -136,12 +137,13 @@ void copyElements(int *dest, int *src, int n) {
 int copyOddOnly(int *dest, int *src, int n) {
   int s = 0;
   for (int i=0; i<n; i++)
-	  if (src[i]%2=1)
+  {
+	  if (src[i]%2==1 || src[i]%2==-1)
 	  {
-		  s = s +1;
-  		dest[n]=sec[n];
+  		dest[s]=src[i];
+		s=s+1;
 	  }
-}
+ }
 	return s; // stub @@@ FIX THIS 
 }
 
@@ -157,7 +159,11 @@ int copyOddOnly(int *dest, int *src, int n) {
 // product will be {3,10,21,36}.
 
 void multiplyPairwise(int *a, int *b, int *product, int n) {
-  // STUB; fix this
+ for (int i= 0; i<n ; i++)
+ {
+	 product[i]= a[i]*b[i];
+	// STUB; fix this
+}
 }
 
 // len is the number of elements the array you create should contain
