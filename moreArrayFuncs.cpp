@@ -2,25 +2,24 @@
  |
  |       Author:  Lawrence Su
  |
- |   To Compile:  EXPLAIN HOW TO COMPILE THIS PROGRAM
+ |   To Compile:  run with make and test with make tests
  |
- |        Class:  NAME AND QUARTER OF THE CLASS FOR WHICH THIS PROGRAM WAS
- |                      WRITTEN
- |     Due Date:  DATE AND TIME THAT THIS PROGRAM IS/WAS DUE TO BE SUBMITTED
+ |        Class:  CS 16 S 19
+ |     Due Date:  5/22 sumbitted 5/20
  |
  +-----------------------------------------------------------------------------
  |
  |  Description:  DESCRIBE THE PROBLEM THAT THIS PROGRAM WAS WRITTEN TO SOLVE.
  |
- |        Input:  DESCRIBE THE INPUT THAT THE PROGRAM REQUIRES.
+ |        Input:  no input
  |
- |       Output:  DESCRIBE THE OUTPUT THAT THE PROGRAM PRODUCES.
+ |       Output:  output tests
  |
- |    Algorithm:  OUTLINE THE APPROACH USED BY THE PROGRAM TO SOLVE THE
- |      PROBLEM.
+ |    Algorithm:  Each function inputs an array and a size, and uses a for loop to manipulate, or to create an array, and return an index,
+ 		  a value, or an array
+ |     
  |
- |   Known Bugs:  IF THE PROGRAM DOES NOT FUNCTION CORRECTLY IN SOME
- |      SITUATIONS, DESCRIBE THE SITUATIONS AND PROBLEMS HERE.
+ |   Known Bugs:  there are no known bugs, as each test passes
  |
  */
 #include <cassert>
@@ -74,7 +73,7 @@ int largestValue(int *a, int size) {
   int largest = a[0];
   for (int i=0; i<size; i++) 
   {
-	  if (a[i]>a[0])
+	  if (a[i]>largest)
 	  {
 	  largest = a[i];
 	  }
